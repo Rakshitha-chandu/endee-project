@@ -89,7 +89,11 @@ See the Mermaid diagram below.
 
 ---
 
-`rag-referral-email-generator/
+
+
+## Project Structure
+
+```rag-referral-email-generator/
 │
 ├── app/
 │ ├── ingest_resume.py
@@ -102,7 +106,7 @@ See the Mermaid diagram below.
 │
 ├── screenshots/
 ├── requirements.txt
-└── README.md`x
+└── README.mdx ```
 
 
 ---
@@ -180,24 +184,20 @@ For academic and evaluation purposes.
 ```mermaid
 flowchart TD
 
-A[Resume PDFs] --> B[Text Extraction & Cleaning]
+A[Resume PDFs] --> B[Text Extraction and Cleaning]
 B --> C[Chunking]
 
-C --> D[Ollama Embeddings\n(nomic-embed-text)]
+C --> D[Ollama Embeddings - nomic-embed-text]
 D --> E[Endee Vector Database]
 
 F[Job Description] --> G[JD Embedding]
 G --> E
 
-E --> H[Semantic Retrieval\nTop Resume Snippets]
+E --> H[Semantic Retrieval - Top Resume Snippets]
 H --> I[Groq LLaMA 3.1]
 
 I --> J[Personalized Referral Email]
 
 
 
-
-
-
-## Project Structure
 
