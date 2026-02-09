@@ -179,15 +179,15 @@ Ensure embedding model is available:
 
 ### Main Interface
 
-![UI Main](screenshots/ui_main.png)
+![UI Main](ui.png)
 
 ### Retrieved Resume Evidence
 
-![Retrieval](screenshots/retrieval.png)
+![Retrieval](retrieval.png)
 
 ### Generated Referral Email
 
-![Email Output](screenshots/email.png)
+![Email Output](email.png)
 
 
 ## Future Improvements
