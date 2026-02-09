@@ -45,10 +45,26 @@ This ensures:
 - Fast LLM inference via Groq
 
 ---
+## Architecture Diagram
 
-## Architecture
+```mermaid
+flowchart TD
 
-See the Mermaid diagram below.
+A[Resume PDFs] --> B[Text Extraction and Cleaning]
+B --> C[Chunking]
+
+C --> D[Ollama Embeddings - nomic-embed-text]
+D --> E[Endee Vector Database]
+
+F[Job Description] --> G[JD Embedding]
+G --> E
+
+E --> H[Semantic Retrieval - Top Resume Snippets]
+H --> I[Groq LLaMA 3.1]
+
+I --> J[Personalized Referral Email]
+
+```
 
 ---
 
@@ -106,7 +122,8 @@ See the Mermaid diagram below.
 │
 ├── screenshots/
 ├── requirements.txt
-└── README.mdx ```
+└── README.mdx
+```
 
 
 ---
@@ -158,6 +175,21 @@ Ensure embedding model is available:
 
 ---
 
+## UI Screenshots
+
+### Main Interface
+
+![UI Main](screenshots/ui_main.png)
+
+### Retrieved Resume Evidence
+
+![Retrieval](screenshots/retrieval.png)
+
+### Generated Referral Email
+
+![Email Output](screenshots/email.png)
+
+
 ## Future Improvements
 
 - Skill gap analysis
@@ -179,24 +211,8 @@ Rakshitha
 For academic and evaluation purposes.
 
 
-## Architecture Diagram
 
-```mermaid
-flowchart TD
 
-A[Resume PDFs] --> B[Text Extraction and Cleaning]
-B --> C[Chunking]
-
-C --> D[Ollama Embeddings - nomic-embed-text]
-D --> E[Endee Vector Database]
-
-F[Job Description] --> G[JD Embedding]
-G --> E
-
-E --> H[Semantic Retrieval - Top Resume Snippets]
-H --> I[Groq LLaMA 3.1]
-
-I --> J[Personalized Referral Email]
 
 
 
