@@ -179,7 +179,7 @@ Ensure embedding model is available:
 
 ### Main Interface
 
-![UI Main](ui.png)
+![UI Main](ui_image.png)
 
 ### Retrieved Resume Evidence
 
